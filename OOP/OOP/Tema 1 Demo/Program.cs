@@ -11,13 +11,10 @@ namespace Tema_1_Demo
         {
             //int[] nums = (new int[6]).OrderBy(x => x).ToArray();
 
-
-
             //var calc = new Vtori.Calculator();
             //Console.Write("Vuvedi inchove:");
             //var result = calc.ConvertInchToCm(double.Parse(Console.ReadLine()));
             //Console.WriteLine("Rezultat v cm:" + result);
-
 
             //var test = new Purvi.Calculator();
 
@@ -36,9 +33,9 @@ namespace Tema_1_Demo
             while (true)
             {
                 Console.Write($"Kakva e vuzrastta na {person1.Name}:");
-                person1.Age=int.Parse(Console.ReadLine());
+                person1.Age = int.Parse(Console.ReadLine());
                 Console.WriteLine($"Vuzrastta na {person1.Name} e:{person1.Age}");
-                Console.WriteLine(new String('=',20));
+                Console.WriteLine(new String('=', 20));
             }
 
 
@@ -66,6 +63,9 @@ namespace Tema_1_Demo
 
     public class Person
     {
+
+        private static string[] countries = { "Bulgaria", "Russia", "Macedonia", "Serbia", "Iraq", "Bangladesh" };
+
         public string Name { get; set; }
 
         private int age;
@@ -73,10 +73,8 @@ namespace Tema_1_Demo
         public int Age
         {
             get => age;
-
             set
             {
-
                 if (value < 0)
                 {
                     Console.WriteLine("Nedei pisa gluposti!!!");
