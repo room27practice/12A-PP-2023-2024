@@ -9,7 +9,7 @@ namespace Tema_1_Demo
     {
         static void Main(string[] args)
         {
-            //int[] nums = (new int[6]).OrderBy(x => x).ToArray();
+            int[] nums = (new[] { 1, 2, 3, 4 }).OrderBy(x => x).ToArray();
 
             //var calc = new Vtori.Calculator();
             //Console.Write("Vuvedi inchove:");
