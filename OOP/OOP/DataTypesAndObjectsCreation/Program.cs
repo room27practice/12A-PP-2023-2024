@@ -13,14 +13,13 @@ namespace DataTypesAndObjectsCreation
             dog1.Name = "Sharo";
 
             Dog dog2 = new Dog()
-            { Age = 3, Name = "Mecho", Gender = true, Breed = "San Bernar" };
+            {  Name = "Mecho", Gender = true, Breed = "San Bernar" };
 
             Console.WriteLine(dog2.Name);
 
             dog2.Name = "Marko";
 
-
-            Dog snoopDog;// Това ще е null защото не е дефинирано
+           Dog snoopDog;// Това ще е null защото не е дефинирано
 
 
             var copyDog = dog2;
@@ -43,8 +42,20 @@ namespace DataTypesAndObjectsCreation
 
             dog1.Parent = null;
             dog2.Parent = dog1;
-
+            dog1.Name = "Petur";
             dog2.Parent.Name = "Petur";
+
+            dog2.GetOlder();
+            dog2.PresentSelf();
+
+            Dog[] dogs = new Dog[] { dog1, dog2 };
+
+            foreach (Dog dog in dogs)
+            {
+                dog.PresentSelf();
+                dog.GetOlder();
+                dog.Name = dog.Name + " bau bau!";
+            }
 
         }
     }
@@ -54,13 +65,41 @@ namespace DataTypesAndObjectsCreation
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int Age { get; set; }
+        public int Age { get; private set; } = 0;
         public bool Gender { get; set; }
         public string Breed { get; set; }
         public int[] FavoriteNumbers { get; set; }
-
         public Dog Parent { get; set; }
+        public bool IsAlive { get; private set; } = true;
+
+        public void PresentSelf()
+        {
+            #region IfAlternativeToTernaryOperator
+            //if (Age < 2)
+            //{
+            //    Console.WriteLine("I am a puppy");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("I am a dog");
+            //}
+            #endregion
+            string dogType = Age < 2 ? "puppy" : "dog";
+            // string dogType = Age < 2 ? "puppy" : Age <= 5 ? "infant" : "dog";
+            Console.WriteLine($"I am a {dogType}");
+            Console.WriteLine($"My Name is {Name}. My breed is {Breed}");
+            if (Parent !=null)
+            {
+            Console.WriteLine($"My parentName is {Parent.Name}.");                
+            }
+        }
+        public void GetOlder()
+        {
+            if (!IsAlive)
+            {
+                return;
+            }
+            Age++;
+        }
     }
-
-
 }
