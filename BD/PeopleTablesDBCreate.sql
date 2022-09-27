@@ -1,4 +1,5 @@
 CREATE DATABASE HoraDurjaviGradove
+GO
 USE HoraDurjaviGradove
 GO
 CREATE TABLE Countries(
