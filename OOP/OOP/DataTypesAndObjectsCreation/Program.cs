@@ -7,6 +7,13 @@ namespace DataTypesAndObjectsCreation
     {
         static void Main(string[] args)
         {
+            var item = new
+            {
+                Name = "chushkopek",
+                Price = 24,
+                Weight = 2
+            };           
+            
             Dog dog1 = new Dog();
 
             dog1.Id = 32;
@@ -19,7 +26,7 @@ namespace DataTypesAndObjectsCreation
 
             dog2.Name = "Marko";
 
-           Dog snoopDog;// Това ще е null защото не е дефинирано
+            Dog snoopDog;// Това ще е null защото не е дефинирано
 
 
             var copyDog = dog2;
@@ -35,7 +42,7 @@ namespace DataTypesAndObjectsCreation
 
             alabala[1] = 444;
 
-            dog1.FavoriteNumbers = new int[] { 1, 3, 4, 5 };
+            dog1.FavoriteNumbers = new int[] {1, 3, 4, 5};
 
             dog2.FavoriteNumbers = dog1.FavoriteNumbers;
             dog2.FavoriteNumbers[3] = 99;
@@ -58,7 +65,10 @@ namespace DataTypesAndObjectsCreation
             }
 
         }
+         
     }
+
+
 
 
     public class Dog
