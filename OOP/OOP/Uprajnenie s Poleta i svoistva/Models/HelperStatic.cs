@@ -3,8 +3,8 @@
     public static class HelperStatic
     {
         private static int timesUsed = 5;
-
-        public static double MakeDouble(string str)
+  
+        public static double MakeDoubled(string str)
         {
             timesUsed--;
             if (timesUsed < 0)

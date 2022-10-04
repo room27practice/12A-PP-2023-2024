@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 namespace Uprajnenie_s_Poleta_i_svoistva
 {
     internal class Startup
