@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Threading;
+using Uprajnenie_s_Poleta_i_svoistva;
 
 namespace Tema_1_Demo
 {
@@ -9,6 +10,7 @@ namespace Tema_1_Demo
     {
         static void Main(string[] args)
         {
+          //  Country country = new Country();
             int[] nums = (new[] { 1, 2, 3, 4 }).OrderBy(x => x).ToArray();
 
             //var calc = new Vtori.Calculator();

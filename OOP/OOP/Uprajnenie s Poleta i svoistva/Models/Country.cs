@@ -6,7 +6,6 @@ namespace Uprajnenie_s_Poleta_i_svoistva
     public class Country
     {
         private string designation;
-
         public int Id { get; set; }
         public string Name { get; set; }
         public double PopulationInMilions { get; set; }
@@ -14,7 +13,6 @@ namespace Uprajnenie_s_Poleta_i_svoistva
         {
             get
             {
-
                 return designation;
             }
 
@@ -36,9 +34,12 @@ namespace Uprajnenie_s_Poleta_i_svoistva
                 }
             }
         }
-
         public string ContinentName { get; set; }
         public string Languages { get; set; }
         public string Description { get; set; }
+
+
+
+
     }
 }

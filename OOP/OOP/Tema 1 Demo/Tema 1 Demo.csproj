@@ -6,4 +6,8 @@
     <RootNamespace>Tema_1_Demo</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Uprajnenie s Poleta i svoistva\Uprajnenie s Poleta i svoistva.csproj" />
+  </ItemGroup>
+
 </Project>
