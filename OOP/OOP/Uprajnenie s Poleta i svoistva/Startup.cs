@@ -70,12 +70,12 @@ namespace Uprajnenie_s_Poleta_i_svoistva
 
             Person.SaySchoolName();
 
-            var number0 = HelperStatic.MakeDouble("6.54");
-            var number1 = HelperStatic.MakeDouble("6.54");
-            var number2 = HelperStatic.MakeDouble("6.54");
-            var number3 = HelperStatic.MakeDouble("6.54");
-            var number4 = HelperStatic.MakeDouble("6.54");
-            var number5 = HelperStatic.MakeDouble("6.54");
+            //var number0 = HelperStatic.MakeDouble("6.54");
+            //var number1 = HelperStatic.MakeDouble("6.54");
+            //var number2 = HelperStatic.MakeDouble("6.54");
+            //var number3 = HelperStatic.MakeDouble("6.54");
+            //var number4 = HelperStatic.MakeDouble("6.54");
+            //var number5 = HelperStatic.MakeDouble("6.54");
 
         }
 
