@@ -1,8 +1,6 @@
 ﻿
 using System;
 using System.Linq;
-using System.Threading;
-using Uprajnenie_s_Poleta_i_svoistva;
 
 namespace Tema_1_Demo
 {

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Probvame.Net6
+﻿namespace Probvame.Net6
 {
     internal class Car
     {
         public Car()
         {
-            YearOfMake = 1989;
+            YearOfMake = 1989;            
         }
         internal Car(string color) : this()
         {

@@ -1,9 +1,5 @@
-﻿
-using System;
-
-
-namespace Tema_1_Demo
+﻿namespace Tema_1_Demo
 {
-   
+
 
 }

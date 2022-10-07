@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataTypesAndObjectsCreation
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Uprajnenie s Poleta i svoistva", "Uprajnenie s Poleta i svoistva\Uprajnenie s Poleta i svoistva.csproj", "{5516FA63-10E9-481D-977D-7F3DE22B50B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probvame.Net6", "Probvame.Net6\Probvame.Net6.csproj", "{9A69840F-E1C6-44A5-A5C9-30A5FEB641C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Probvame.Net6", "Probvame.Net6\Probvame.Net6.csproj", "{9A69840F-E1C6-44A5-A5C9-30A5FEB641C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodsExamples", "MethodsExamples\MethodsExamples.csproj", "{D46551B7-B578-4C64-B7E4-B3F49EB463D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9A69840F-E1C6-44A5-A5C9-30A5FEB641C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A69840F-E1C6-44A5-A5C9-30A5FEB641C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A69840F-E1C6-44A5-A5C9-30A5FEB641C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46551B7-B578-4C64-B7E4-B3F49EB463D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46551B7-B578-4C64-B7E4-B3F49EB463D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46551B7-B578-4C64-B7E4-B3F49EB463D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46551B7-B578-4C64-B7E4-B3F49EB463D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
