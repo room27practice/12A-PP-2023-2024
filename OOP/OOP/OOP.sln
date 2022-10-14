@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Probvame.Net6", "Probvame.N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodsExamples", "MethodsExamples\MethodsExamples.csproj", "{D46551B7-B578-4C64-B7E4-B3F49EB463D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumerations", "Enumerations\Enumerations.csproj", "{73F5A219-CAC8-498A-BF96-467DFFD5F28C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerations", "Enumerations\Enumerations.csproj", "{73F5A219-CAC8-498A-BF96-467DFFD5F28C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avtomontior", "Avtomontior\Avtomontior.csproj", "{3551950F-A89C-489D-BD20-DA783EEDE2D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{73F5A219-CAC8-498A-BF96-467DFFD5F28C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73F5A219-CAC8-498A-BF96-467DFFD5F28C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73F5A219-CAC8-498A-BF96-467DFFD5F28C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3551950F-A89C-489D-BD20-DA783EEDE2D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3551950F-A89C-489D-BD20-DA783EEDE2D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3551950F-A89C-489D-BD20-DA783EEDE2D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3551950F-A89C-489D-BD20-DA783EEDE2D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
