@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+html{
+background-color: black !important;
+
+font:16px/1.5 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+font-size: 16px;
+line-height: 1.5;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+box-sizing:border-box;
+}
+
+div p nav li ul ol span body footer header h1 h2 h3 h4 h5 h6 {
+    font:inherit;
+    box-sizing: inherit;
+    padding:0;
+    margin:0;
+}
+
+html{
+    background-color: red;
+}
+
+
+h1{
+    font-size: 2rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+
+div{
+     background-color: brown; 
+}
+
+div.modified>p:nth-child(2){
+    border:1px solid yellowgreen;
+    color:whitesmoke;
+    font-family:cursive; 
+}
+
+.sp-wd{
+    background-color: aqua;
+    color:red;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.sp-wd:hover{
+    color:magenta;
+}
+
+p.sp-font{
+    font-family: 'Fasthand', cursive;
+    color:yellow;
+    padding-left: 1em;
+    padding-top:1.5em;
+    padding-bottom:1.6em;
+    padding-right: 2em;
+
+
+    padding:1.5em 2em;
+}

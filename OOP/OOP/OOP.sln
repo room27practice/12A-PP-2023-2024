@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodsExamples", "MethodsE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerations", "Enumerations\Enumerations.csproj", "{73F5A219-CAC8-498A-BF96-467DFFD5F28C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avtomontior", "Avtomontior\Avtomontior.csproj", "{3551950F-A89C-489D-BD20-DA783EEDE2D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avtomontior", "Avtomontior\Avtomontior.csproj", "{3551950F-A89C-489D-BD20-DA783EEDE2D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{585DC92D-E54C-4BC8-8741-83B51653C9C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{3551950F-A89C-489D-BD20-DA783EEDE2D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3551950F-A89C-489D-BD20-DA783EEDE2D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3551950F-A89C-489D-BD20-DA783EEDE2D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585DC92D-E54C-4BC8-8741-83B51653C9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585DC92D-E54C-4BC8-8741-83B51653C9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585DC92D-E54C-4BC8-8741-83B51653C9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585DC92D-E54C-4BC8-8741-83B51653C9C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
