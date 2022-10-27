@@ -19,7 +19,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumerations", "Enumeration
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avtomontior", "Avtomontior\Avtomontior.csproj", "{3551950F-A89C-489D-BD20-DA783EEDE2D5}"
 EndProject
+<<<<<<< HEAD
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance", "Inheritance\Inheritance.csproj", "{585DC92D-E54C-4BC8-8741-83B51653C9C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceVirtualDEMO", "InheritanceVirtualDEMO\InheritanceVirtualDEMO.csproj", "{D9CA6151-08C4-4217-8269-0F0DD354B17E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModifiedCollections", "ModifiedCollections\ModifiedCollections.csproj", "{7DC03445-8564-4524-9835-E43B7BC8081A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Superposition_Inheritance_Difference", "Superposition_Inheritance_Difference\Superposition_Inheritance_Difference.csproj", "{2EE15168-7C02-45DD-988D-925D1877FBAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Error_Handling", "Error_Handling\Error_Handling.csproj", "{D89C49EC-7DF9-427F-A52A-F85AF3C60411}"
+=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{585DC92D-E54C-4BC8-8741-83B51653C9C1}"
+>>>>>>> parent of 868893e (add)
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +75,25 @@ Global
 		{585DC92D-E54C-4BC8-8741-83B51653C9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{585DC92D-E54C-4BC8-8741-83B51653C9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{585DC92D-E54C-4BC8-8741-83B51653C9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+		{D9CA6151-08C4-4217-8269-0F0DD354B17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9CA6151-08C4-4217-8269-0F0DD354B17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9CA6151-08C4-4217-8269-0F0DD354B17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9CA6151-08C4-4217-8269-0F0DD354B17E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC03445-8564-4524-9835-E43B7BC8081A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC03445-8564-4524-9835-E43B7BC8081A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC03445-8564-4524-9835-E43B7BC8081A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC03445-8564-4524-9835-E43B7BC8081A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EE15168-7C02-45DD-988D-925D1877FBAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EE15168-7C02-45DD-988D-925D1877FBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EE15168-7C02-45DD-988D-925D1877FBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EE15168-7C02-45DD-988D-925D1877FBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89C49EC-7DF9-427F-A52A-F85AF3C60411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89C49EC-7DF9-427F-A52A-F85AF3C60411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89C49EC-7DF9-427F-A52A-F85AF3C60411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89C49EC-7DF9-427F-A52A-F85AF3C60411}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> parent of 868893e (add)
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
