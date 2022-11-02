@@ -61,6 +61,11 @@ FOREIGN KEY(ManagerID) REFERENCES Employees(EmployeeID)
 
 SELECT * FROM DepositTypes
 
+INSERT INTO DepositTypes VALUES
+(1,	'Time Deposit'),
+(2,	'Call Deposit'),
+(3,	'Free Deposit')
+
 INSERT INTO EmployeesDeposits VALUES
 (15, 	4 ),
 (20, 	15),
@@ -73,12 +78,10 @@ INSERT INTO EmployeesDeposits VALUES
 (13,	4 ),
 (14,	9 )
 
-INSERT INTO DepositTypes VALUES
-(1,	'Time Deposit'),
-(2,	'Call Deposit'),
-(3,	'Free Deposit')
+https://github.com/Martin-BG/SoftUni-DatabaseBasics-MySQL/blob/master/11.%20Exam%20Preparation%203/Databases%20MySQL%20Exam%20-%2012%20Oct%202016.sql
 
-INSERT INTO Deposits VALUES
+
+
 
 
 SELECT * FROM Deposits
