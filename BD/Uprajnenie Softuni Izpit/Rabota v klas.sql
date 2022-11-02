@@ -59,4 +59,30 @@ ADD ManagerID int,
 CONSTRAINT FK_Employees_Employees
 FOREIGN KEY(ManagerID) REFERENCES Employees(EmployeeID)
 
-SELECT * FROM Employees
+SELECT * FROM DepositTypes
+
+INSERT INTO EmployeesDeposits VALUES
+(15, 	4 ),
+(20, 	15),
+(8 ,	7 ),
+(4 ,	8 ),
+(3 ,	13),
+(3 ,	8 ),
+(4 ,	10),
+(10,	1 ),
+(13,	4 ),
+(14,	9 )
+
+INSERT INTO DepositTypes VALUES
+(1,	'Time Deposit'),
+(2,	'Call Deposit'),
+(3,	'Free Deposit')
+
+INSERT INTO Deposits VALUES
+
+
+SELECT * FROM Deposits
+
+
+SELECT CustomerID,Gender,DateOfBirth FROM Customers AS c
+WHERE CustomerID <20
