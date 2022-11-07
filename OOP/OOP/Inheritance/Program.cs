@@ -28,7 +28,7 @@ namespace Inheritance
             arr[0] = 55;
 
 
-            Animal[] animals = new Animal[] { c1, d1, a1 };
+            Animal[] animals = new Animal[] { c1, d1 };
             foreach (Animal animal in animals)
             {
                 Console.WriteLine("I am {0}. I am {1} yars old", animal.UserName, animal.Age);
