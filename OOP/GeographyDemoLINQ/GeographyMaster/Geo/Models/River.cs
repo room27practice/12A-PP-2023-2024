@@ -29,5 +29,11 @@ namespace Geo.Models
         public string Outflow { get; set; }
 
         public virtual ICollection<CountriesRiver> CountriesRivers { get; set; }
+
+        public override string ToString()
+        {
+            return $"{RiverName}. Length {Length} km. Outflow: {Outflow}";
+        }
+
     }
 }

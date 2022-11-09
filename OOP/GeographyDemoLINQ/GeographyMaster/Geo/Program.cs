@@ -29,27 +29,57 @@ namespace Geo
                 //db.SaveChanges();
                 #endregion
 
-                var riverNames = db.Rivers
-                    .Where(r => r.CountriesRivers.Any(c => c.CountryCode == "BG"))
-                    .Select(r => r.RiverName).Distinct()
-                    .ToArray();
-
-                List<River> approvedRivers = new List<River>();
-                foreach (var rName in riverNames)
+                Country countryFound = null;
+                while (countryFound == null)
                 {
-                    approvedRivers
-                        .Add(db.Rivers.FirstOrDefault(r => r.RiverName == rName));
+                    Console.WriteLine("Choose country to display:");
+                    Console.WriteLine("[CountryName] or [CountryId]"); //BG Bulgaria BULgaria
+                    string countryID = Console.ReadLine().ToLower();//bulgariaN134324234 //BG 
+
+                    countryFound = db.Countries
+                        .Include(x => x.CountriesRivers)
+                        .ThenInclude(x => x.River)
+
+                        .Include(x => x.MountainsCountries)
+                        .ThenInclude(x => x.Mountain)
+                        .ThenInclude(x => x.Peaks)
+
+                        .Include(x => x.MountainsCountries)
+                        .ThenInclude(x => x.Mountain)
+                        .ThenInclude(x => x.MountainsCountries)
+                        .ThenInclude(x => x.CountryCodeNavigation)
+
+                        .FirstOrDefault(
+                        x => countryID.StartsWith(x.CountryName.ToLower())
+                        || countryID.StartsWith(x.CountryCode.ToLower()));
+
                 }
 
-                var countryFound = db.Countries
-                    .Include(x => x.CountriesRivers)
-                    .ThenInclude(x => x.River)
-                    .First(x => x.CountryName == "Bulgaria");
+                PrintData(countryFound);
 
-                countryFound.CountriesRivers = countryFound.CountriesRivers
-                    .Where(x => approvedRivers.Contains(x.River)).ToList();
 
-                db.SaveChanges();
+
+                //var riverNames = db.Rivers
+                //    .Where(r => r.CountriesRivers.Any(c => c.CountryCode == "BG"))
+                //    .Select(r => r.RiverName).Distinct()
+                //    .ToArray();
+
+                //List<River> approvedRivers = new List<River>();
+                //foreach (var rName in riverNames)
+                //{
+                //    approvedRivers
+                //        .Add(db.Rivers.FirstOrDefault(r => r.RiverName == rName));
+                //}
+
+                //var countryFound = db.Countries
+                //    .Include(x => x.CountriesRivers)
+                //    .ThenInclude(x => x.River)
+                //    .First(x => x.CountryName == "Bulgaria");
+
+                //countryFound.CountriesRivers = countryFound.CountriesRivers
+                //    .Where(x => approvedRivers.Contains(x.River)).ToList();
+
+                //db.SaveChanges();
 
                 //var countryFound = db.Countries
                 //    .Include(x => x.CountriesRivers)
@@ -62,7 +92,7 @@ namespace Geo
                 //    .ToArray();
 
 
-               // Console.WriteLine(String.Join("\n", riverNames));
+                // Console.WriteLine(String.Join("\n", riverNames));
                 //Console.WriteLine(new String('=', 20));
                 //Console.WriteLine(String.Join("\n", riverNames2));
 
@@ -77,6 +107,30 @@ namespace Geo
 
 
 
+        }
+
+        private static void PrintData(Country countryFound)
+        {
+            Console.WriteLine($"CountryFound: {countryFound.CountryName}");
+            Console.WriteLine($"Area: {countryFound.AreaInSqKm} km2");
+            Console.WriteLine($"Population: {countryFound.Population} km2");
+            Console.WriteLine(new String('=', 30));
+            Console.WriteLine($"Rivers: {countryFound.CountriesRivers.Count()}");
+            foreach (River river in countryFound.CountriesRivers.Select(x => x.River).ToArray())
+            {
+                Console.WriteLine($"\t {river.ToString()}");
+            }
+            Console.WriteLine(new String('=', 30));
+            Console.WriteLine($"Mountains: {countryFound.MountainsCountries.Count()}");
+            foreach (Mountain mountain in countryFound.MountainsCountries.Select(x => x.Mountain).ToArray())
+            {
+                Console.WriteLine($"{mountain.MountainRange}. Countries: {string.Join("; ", mountain.MountainsCountries.Select(c => c.CountryCodeNavigation.CountryName))}");
+                foreach (Peak p in mountain.Peaks.OrderByDescending(x => x.Elevation))
+                {
+                    Console.WriteLine(new String('=', 15));
+                    Console.WriteLine($"\t {p.PeakName}. Elevation: {p.Elevation}");
+                }
+            }
         }
     }
 }
