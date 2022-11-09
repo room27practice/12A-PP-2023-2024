@@ -10,7 +10,6 @@ namespace Geo
     {
         static void Main()
         {
-
             using (var db = new GeographyDBContext())
             {
                 #region AddingNewRiver
@@ -57,8 +56,6 @@ namespace Geo
 
                 PrintData(countryFound);
 
-
-
                 //var riverNames = db.Rivers
                 //    .Where(r => r.CountriesRivers.Any(c => c.CountryCode == "BG"))
                 //    .Select(r => r.RiverName).Distinct()
@@ -91,22 +88,10 @@ namespace Geo
                 //    .Select(x => $"{x.River.RiverName}: {x.River.Length}km")
                 //    .ToArray();
 
-
                 // Console.WriteLine(String.Join("\n", riverNames));
                 //Console.WriteLine(new String('=', 20));
                 //Console.WriteLine(String.Join("\n", riverNames2));
-
-
-
-
-
-
             }
-
-
-
-
-
         }
 
         private static void PrintData(Country countryFound)
