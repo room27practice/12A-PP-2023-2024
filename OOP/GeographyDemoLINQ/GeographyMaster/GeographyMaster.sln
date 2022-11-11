@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geo", "Geo\Geo.csproj", "{A780FCCF-5618-4B33-B999-06B7930C3EDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geo", "Geo\Geo.csproj", "{A780FCCF-5618-4B33-B999-06B7930C3EDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School", "School\School.csproj", "{8FEB2D80-A06E-492A-94EB-F0CC30CBD884}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A780FCCF-5618-4B33-B999-06B7930C3EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A780FCCF-5618-4B33-B999-06B7930C3EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A780FCCF-5618-4B33-B999-06B7930C3EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FEB2D80-A06E-492A-94EB-F0CC30CBD884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FEB2D80-A06E-492A-94EB-F0CC30CBD884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FEB2D80-A06E-492A-94EB-F0CC30CBD884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FEB2D80-A06E-492A-94EB-F0CC30CBD884}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

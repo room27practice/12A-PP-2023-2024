@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -8,14 +9,19 @@ namespace Geo.Models
 {
     public partial class GeographyDBContext : DbContext
     {
-        public GeographyDBContext()
+        private Dictionary<string, string> conStrings = new Dictionary<string, string>
         {
-        }
+            ["SomeeDB"] = "workstation id = GeographyDB.mssql.somee.com; packet size = 4096; user id = a1227_SQLLogin_1; pwd=1jek5lt5ou;data source = GeographyDB.mssql.somee.com; persist security info=False;initial catalog = GeographyDB",
+            ["ComputerDB"] = @$"Server=localhost\SQLEXPRESS;Database=Geography;Trusted_Connection=True;"
+        };
+
+
+        public GeographyDBContext()
+        { }
 
         public GeographyDBContext(DbContextOptions<GeographyDBContext> options)
             : base(options)
-        {
-        }
+        { }
 
         public virtual DbSet<Continent> Continents { get; set; }
         public virtual DbSet<CountriesRiver> CountriesRivers { get; set; }
@@ -31,7 +37,7 @@ namespace Geo.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("workstation id=GeographyDB.mssql.somee.com;packet size=4096;user id=a1227_SQLLogin_1;pwd=1jek5lt5ou;data source=GeographyDB.mssql.somee.com;persist security info=False;initial catalog=GeographyDB");
+                optionsBuilder.UseSqlServer(conStrings["ComputerDB"]);
             }
         }
 

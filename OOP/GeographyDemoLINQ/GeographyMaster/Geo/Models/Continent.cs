@@ -14,6 +14,7 @@ namespace Geo.Models
 
         public string ContinentCode { get; set; }
         public string ContinentName { get; set; }
+        public double ContinentArea { get; set; }
 
         public virtual ICollection<Country> Countries { get; set; }
     }
