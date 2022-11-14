@@ -17,9 +17,9 @@ namespace School.Models
         [MaxLength(64)]
         public string Subjects { get; set; }
 
-        [ForeignKey(nameof(Class))]
-        public int? ManagedClassID { get; set; }
-        public virtual Class ManagedClass { get; set; }
+        //[ForeignKey(nameof(Class))]
+        //public int? ManagedClassID { get; set; }
+        //public virtual Class ManagedClass { get; set; }
     }
 
 }

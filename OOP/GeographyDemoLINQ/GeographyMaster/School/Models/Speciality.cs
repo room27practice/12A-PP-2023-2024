@@ -16,6 +16,24 @@ namespace School.Models
             Classes = new HashSet<Class>();
         }
 
+        public Speciality(string name, string description, string graduatesTitle)
+        {
+            Name = name;
+            Description = description;
+            GraduatesTitle = graduatesTitle;
+            StartGrade = 8;
+            EndGrade = 12;
+
+        }
+
+        public Speciality(string name, string description, string graduatesTitle,int startGrade,int endGrade):this(name,description,graduatesTitle)
+        {
+            StartGrade = startGrade;
+            EndGrade = endGrade;
+        }
+
+
+
         public string Name { get; set; }
         public string Description { get; set; }
 

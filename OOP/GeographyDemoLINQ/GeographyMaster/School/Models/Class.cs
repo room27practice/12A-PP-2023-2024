@@ -21,8 +21,8 @@ namespace School.Models
         public int SpecialityId { get; set; }
         public virtual Speciality Speciality { get; set; }
 
-
-        public ICollection<Student> Students { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
+        
         public int TeacherId { get; set; }
         public virtual Teacher KlasenRukovoditel { get; set; }
 
