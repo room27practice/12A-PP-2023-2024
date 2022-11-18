@@ -1,0 +1,42 @@
+div.car1{
+    display:inline-block;
+margin-bottom: 1rem;
+}
+
+div.car1>img{
+width: 12.5em;
+height:auto;
+border-radius: 1em;
+float:left;
+margin-right:1rem;
+opacity:0.8;
+}
+
+div.car1>img:hover{
+    opacity:1;
+    box-shadow: 0px 0px 22px 8px rgba(240,77,240,1);
+    }
+
+div.car1>p{
+   clear:none;
+   color:red;
+}
+
+body>h3:first-child{
+    text-decoration-line:underline;
+    text-decoration-style:dotted;
+    text-decoration-color: red;
+    
+    text-align: center;
+    margin-bottom:1.5rem;
+    color:rgb(50, 193, 50);
+}
+
+span.sp-fnt{
+    font-style: italic;
+    font-weight: bold;
+    color:blueviolet;
+}
+
+
+
