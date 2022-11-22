@@ -1,9 +1,24 @@
 body{
-background-color: bisque;
+background-color: rgb(250, 210, 173);
 padding:1rem 0;
 width:80%;
+min-width:47rem;
 margin:0 auto;
+}
 
+header{
+    background-color: black;
+    padding:0.8rem;
+}
+header>ul{
+    list-style-type: none;
+    color:yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bolder;
+font-size:1.2em;
+display:flex;
+}
 
-
+header>ul>li{
+    padding-right: 0.9em;
 }

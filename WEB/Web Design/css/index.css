@@ -1,3 +1,4 @@
+
 div.car1{
     display:inline-block;
 margin-bottom: 1rem;
@@ -19,7 +20,12 @@ div.car1>img:hover{
 
 div.car1>p{
    clear:none;
-   color:red;
+   color:#C43118;
+  
+}
+
+div.car1>div{
+    min-width:46em;
 }
 
 body>h3:first-child{
@@ -37,6 +43,23 @@ span.sp-fnt{
     font-weight: bold;
     color:blueviolet;
 }
+
+div.car1>div>h5{
+    display: inline-block;
+}
+
+i.right{
+    float: right;
+}
+
+div.car1>div>i.right
+{
+color:#C43118;
+    margin-right:1em;
+}
+
+
+
 
 
 

@@ -2,3 +2,63 @@ body{
     background: rgba(183,222,237,1);
 background: -moz-linear-gradient(left, rgba(183,222,237,1) 0%, rgba(255,175,75,1) 32%, rgba(113,206,239,1) 50%, rgba(33,180,226,1) 51%, rgba(183,222,237,1) 100%);
 }
+
+div.content{
+    border:1px solid;
+    max-width: 45em;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+div.content h4,
+div.content h6
+{
+    margin-bottom:0.5em;
+}
+
+a.adr-lnk{
+    color:red;
+    text-decoration: none;
+}
+
+#prof-pic{
+    width:10em;
+    height: auto;
+    float:right;
+    margin-right:1em;
+    border-radius:0.5em 1em 0 0;
+}
+
+div.p-data{
+    display:flex;
+    justify-content: space-between;
+flex-wrap: wrap;
+}
+
+div.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+div.gallery>section{
+    width:28%;
+    border:1px solid green;
+    padding: 0.25em;
+    padding-right: 0;
+    margin-top:1rem;
+}
+
+div.gallery>section>img{
+    max-width:90%;
+    height: auto;
+    margin:0 auto;
+}
+
+
+
+/* body > div > div.gallery > section > img{
+    display:none;
+} */
