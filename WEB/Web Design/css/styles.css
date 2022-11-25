@@ -1,24 +1,27 @@
 body{
 background-color: rgb(250, 210, 173);
-padding:1rem 0;
+padding: 0 1rem;
 width:80%;
 min-width:47rem;
 margin:0 auto;
 }
 
-header{
+/* header{
     background-color: black;
     padding:0.8rem;
-}
-header>ul{
+} */
+header>ul,
+header>ul a{
     list-style-type: none;
     color:yellow;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-weight: bolder;
-font-size:1.2em;
-display:flex;
+    font-weight: bolder;
+    font-size:1.2rem;
+    display:flex;
+    text-decoration: none;
 }
 
 header>ul>li{
     padding-right: 0.9em;
 }
+

@@ -2,6 +2,7 @@
 div.car1{
     display:inline-block;
 margin-bottom: 1rem;
+border:1px solid red;
 }
 
 div.car1>img{
@@ -52,10 +53,29 @@ i.right{
     float: right;
 }
 
-div.car1>div>i.right
+div.car1>div i.right
+
 {
 color:#C43118;
-    margin-right:1em;
+margin-right:1em;
+}
+
+div.show-more,
+div.show-less{
+    display:flex;
+    justify-content: end;
+    margin:1em 0;
+}
+div.show-more>i,
+div.show-less>i
+{
+    color:#C43118;
+}
+
+div.show-more>i:hover,
+div.show-less>i:hover
+{
+  cursor:pointer;
 }
 
 
