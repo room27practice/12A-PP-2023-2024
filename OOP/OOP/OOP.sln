@@ -35,7 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Listove", "Listove\Listove.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceExersism", "InheritanceExersism\InheritanceExersism.csproj", "{B319A960-3953-45D5-81C3-ACE5B50145CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionClass", "ExtensionClass\ExtensionClass.csproj", "{2649D7A1-61F6-415B-A24F-45E6280FCCC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionClass", "ExtensionClass\ExtensionClass.csproj", "{2649D7A1-61F6-415B-A24F-45E6280FCCC4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfeisi", "Interfeisi\Interfeisi.csproj", "{89B11467-9638-438B-9EBC-6A133847395D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimes", "DateTimes\DateTimes.csproj", "{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +115,14 @@ Global
 		{2649D7A1-61F6-415B-A24F-45E6280FCCC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2649D7A1-61F6-415B-A24F-45E6280FCCC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2649D7A1-61F6-415B-A24F-45E6280FCCC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89B11467-9638-438B-9EBC-6A133847395D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89B11467-9638-438B-9EBC-6A133847395D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89B11467-9638-438B-9EBC-6A133847395D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89B11467-9638-438B-9EBC-6A133847395D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
