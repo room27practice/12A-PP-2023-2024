@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionClass", "Extension
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfeisi", "Interfeisi\Interfeisi.csproj", "{89B11467-9638-438B-9EBC-6A133847395D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimes", "DateTimes\DateTimes.csproj", "{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimes", "DateTimes\DateTimes.csproj", "{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectManyDemo", "SelectManyDemo\SelectManyDemo.csproj", "{73661CA4-40CA-4988-831C-FF9E97E59B3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF4F3354-5ADE-4E05-8F00-F869DD3F079D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73661CA4-40CA-4988-831C-FF9E97E59B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73661CA4-40CA-4988-831C-FF9E97E59B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73661CA4-40CA-4988-831C-FF9E97E59B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73661CA4-40CA-4988-831C-FF9E97E59B3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,26 +4,23 @@
     {
         List<int> nums = new List<int>();
 
-      //  nums[8] = 45;
+        //  nums[8] = 45;
 
-
-        MyList myNums = new MyList();
-        MyList myNums2 = new MyList();
+        MyList<int> myNums = new MyList<int>();
+        MyList<bool> myNums2 = new MyList<bool>();
 
         myNums.AuthorName = "Marin";
         myNums2.AuthorName = "Samuil";
 
-        MyList.ProjectName = "SuperDobriq proekt bate bate";
-        Console.WriteLine(MyList.ProjectName);
+        MyList<int>.ProjectName = "SuperDobriq proekt bate bate";
+        MyList<string>.ProjectName = "Alabale";
+        Console.WriteLine(MyList<string>.ProjectName);
+
+        var myPeople = new MyList<Person>();
 
 
         myNums.Push(2);
         int lastEl = myNums.Pop();
-
-
-
-        SpecialList sp1 = new SpecialList();
-        
 
         var words = "Marin,Samuil,Miroslav,Emir,Georgi,Sunai,Denian,Kostadin,Idriz,Shukri,Berk,Giunai,Hristomir";
 
@@ -32,21 +29,39 @@
             sp1.Push(word);
         }
 
-
-
     }
 }
-public class MyList : List<int>
+
+class Person : IComparable<Person>
 {
+    public int Id { get; set; }
+    public int Age { get; set; }
+    public string Name { get; set; }
+
+    public int CompareTo(Person other)
+    {
+        return this.Age - other.Age;
+    }
+}
+
+
+public class MyList<T> : List<T>
+       where T : IComparable<T>
+{
+    public MyList()
+    { }
+
+    public MyList(T something)
+    { }
+
     public static string ProjectName { get; set; }
     public string AuthorName { get; set; }
-
-    public void Push(int element)
+    public void Push(T element)
     {
         this.Add(element);
     }
 
-    public int Pop()
+    public T Pop()
     {
         if (!this.Any())
         {
@@ -58,7 +73,7 @@ public class MyList : List<int>
         return result;
     }
 
-    public int Dequeue()
+    public T Dequeue()
     {
         if (!this.Any())
         {
@@ -70,22 +85,22 @@ public class MyList : List<int>
         return result;
     }
 
-    public int PeekFront()
+    public T PeekFront()
     {
         if (!this.Any())
         {
-            return default(int);
+            return default(T);
         }
 
         var result = this.Last();
         return result;
     }
 
-    public int PeekBack()
+    public T PeekBack()
     {
         if (!this.Any())
         {
-            return default(int);
+            return default(T);
         }
 
         var result = this.First();
@@ -93,9 +108,9 @@ public class MyList : List<int>
     }
 
 
-    public List<int> GetEvens()
+    public List<T> GetEvens()
     {
-        var result = new List<int>();
+        var result = new List<T>();
         for (int i = 0; i < this.Count(); i += 2)
         {
             result.Add(this[i]);
@@ -104,20 +119,18 @@ public class MyList : List<int>
         return result;
     }
 
-    public IEnumerable<int> GetOdds()
+    public IEnumerable<T> GetOdds()
     {
-        for (int i = 1; i < this.Count(); i += 2)
-        {
-            yield return this[i];
-        }
+        for (int i = 1; i < this.Count(); i += 2) yield return this[i];
     }
 
-    public List<int> GetNmin(int count) =>
-                    this.OrderBy(x => x).Take(count).ToList();
-    public List<int> GetNmax(int count)
+    public List<T> GetNmin(int count) =>
+                                        this.OrderBy(x => x).Take(count).ToList();
+
+    public List<T> GetNmax(int count)
     {
         var ordered = this.OrderByDescending(x => x).ToArray();
-        var result = new List<int>();
+        var result = new List<T>();
         for (int i = 0; i < count; i++)
         {
             result[i] = ordered[i];
@@ -132,29 +145,29 @@ public class MyList : List<int>
 
 
 
-public class SpecialList
+public class SpecialList<T>
 {
-    private List<string> hiddenList = new List<string>();
+    private List<T> hiddenList = new List<T>();
     public static string ProjectName { get; set; }
     public string AuthorName { get; set; }
 
-    public void Push(string element)
+    public void Push(T element)
     {
         hiddenList.Add(element);
     }
 
-    public string Pop()
+    public T Pop()
     {
         if (!hiddenList.Any())
         {
             throw new InvalidOperationException("Collection is empty");
-        }       
+        }
         var result = hiddenList.Last();
         hiddenList.RemoveAt(hiddenList.Count() - 1);
         return result;
     }
 
-    public string Dequeue()
+    public T Dequeue()
     {
         if (!hiddenList.Any())
         {
@@ -166,22 +179,22 @@ public class SpecialList
         return result;
     }
 
-    public string PeekFront()
+    public T PeekFront()
     {
         if (!hiddenList.Any())
         {
-            return default(string);
+            return default(T);
         }
 
         var result = hiddenList.Last();
         return result;
     }
 
-    public string PeekBack()
+    public T PeekBack()
     {
         if (!hiddenList.Any())
         {
-            return default(string);
+            return default(T);
         }
 
         var result = hiddenList.First();
@@ -189,9 +202,9 @@ public class SpecialList
     }
 
 
-    public List<string> GetEvens()
+    public List<T> GetEvens()
     {
-        var result = new List<string>();
+        var result = new List<T>();
         for (int i = 0; i < hiddenList.Count(); i += 2)
         {
             result.Add(hiddenList[i]);
@@ -200,7 +213,7 @@ public class SpecialList
         return result;
     }
 
-    public IEnumerable<string> GetOdds()
+    public IEnumerable<T> GetOdds()
     {
         for (int i = 1; i < hiddenList.Count(); i += 2)
         {
@@ -208,18 +221,18 @@ public class SpecialList
         }
     }
 
-    public List<string> GetNmin(int count) =>
-                    hiddenList.OrderBy(x => x).Take(count).ToList();
-    public List<string> GetNmax(int count)
-    {
-        var ordered = hiddenList.OrderByDescending(x => x).ToArray();
-        var result = new List<string>();
-        for (int i = 0; i < count; i++)
-        {
-            result[i] = ordered[i];
-        }
-        return result;
-    }
+    //public List<T> GetNmin(int count) =>
+    //                hiddenList.OrderBy(x => x).Take(count).ToList();
+    //public List<T> GetNmax(int count)
+    //{
+    //    var ordered = hiddenList.OrderByDescending(x => x).ToArray();
+    //    var result = new List<T>();
+    //    for (int i = 0; i < count; i++)
+    //    {
+    //        result[i] = ordered[i];
+    //    }
+    //    return result;
+    //}
 
     public override string ToString()
     {
