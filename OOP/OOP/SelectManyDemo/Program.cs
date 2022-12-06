@@ -15,8 +15,7 @@
               Pets = new List<string>{ "Scratches", "Diesel" } },
           new PetOwner { Name="Hines",
               Pets = new List<string>{ "Dusty" } } 
-            
-            
+                       
             };
 
             string[] allPetNames = petOwners.SelectMany(p => p.Pets).Distinct().ToArray();

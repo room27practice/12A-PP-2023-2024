@@ -26,13 +26,13 @@
 
         foreach (string word in words.Split(",").OrderBy(x => x))
         {
-            sp1.Push(word);
+         // sp1.Push(word);
         }
 
     }
 }
 
-class Person : IComparable<Person>
+class  Person : IComparable<Person>
 {
     public int Id { get; set; }
     public int Age { get; set; }

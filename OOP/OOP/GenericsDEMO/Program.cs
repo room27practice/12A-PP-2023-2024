@@ -14,8 +14,6 @@ namespace GenericsDEMO
             konteiner.Add(7);
             konteiner.Add(new Robokiller16());
 
-
-
             var resultaaaa = new int();
 
             var primer2 = new MyClass<int, bool>();
@@ -94,7 +92,7 @@ namespace GenericsDEMO
             private List<T> innerCollection;
 
             public B GenMethod<B>(ICollection<B> items)
-         where B : IComparable<B>
+            where B : IComparable<B>
             {
                 // Код на метода 
                 return default(B);
