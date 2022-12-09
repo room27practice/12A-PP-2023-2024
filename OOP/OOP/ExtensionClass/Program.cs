@@ -6,6 +6,20 @@
         {
             /// double number = double.Parse("6,543");
 
+            string something = "123.5";
+            double sdouble = something.To<double>();
+          //  int sint= something.To<int>();
+          //  long slong= something.To<long>();
+            float sfloat= something.To<float>();
+            decimal sdecimal = something.To<decimal>();
+
+            string test2 = "true";
+            bool iskamBoolean = test2.To<bool>();
+
+            string test3 = "t";
+            char iskamChar = test3.To<char>();
+
+
             string[] spisuk =  {"a", "b", "s", "u", "t","u","i","t","g", "k", "a","d"," ","s","b","U","e" };
 
 

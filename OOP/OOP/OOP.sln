@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimes", "DateTimes\Date
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectManyDemo", "SelectManyDemo\SelectManyDemo.csproj", "{73661CA4-40CA-4988-831C-FF9E97E59B3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericsDEMO", "GenericsDEMO\GenericsDEMO.csproj", "{1AD271D6-DB92-4854-AD64-3DE47F5AD7EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericsDEMO", "GenericsDEMO\GenericsDEMO.csproj", "{1AD271D6-DB92-4854-AD64-3DE47F5AD7EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQDB-KZ-Preparation", "LINQDB-KZ-Preparation\LINQDB-KZ-Preparation.csproj", "{C69ACDAB-B89E-4875-A333-9FE42FD0FFF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{1AD271D6-DB92-4854-AD64-3DE47F5AD7EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AD271D6-DB92-4854-AD64-3DE47F5AD7EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AD271D6-DB92-4854-AD64-3DE47F5AD7EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69ACDAB-B89E-4875-A333-9FE42FD0FFF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69ACDAB-B89E-4875-A333-9FE42FD0FFF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69ACDAB-B89E-4875-A333-9FE42FD0FFF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69ACDAB-B89E-4875-A333-9FE42FD0FFF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
