@@ -21,6 +21,8 @@ namespace LINQDB_KZ_Preparation.Models
         public virtual DbSet<Employee> Employees { get; set; } = null!;
         public virtual DbSet<Project> Projects { get; set; } = null!;
         public virtual DbSet<Town> Towns { get; set; } = null!;
+        //public virtual DbSet<Vehicle> Vehicles { get; set; } = null!;
+        //public virtual DbSet<UserVehicle> UserVehicles { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -28,11 +30,18 @@ namespace LINQDB_KZ_Preparation.Models
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=.;Database=SoftUni;Trusted_Connection=True;");
+                //workstation id=EmpDB75.mssql.somee.com;packet size=4096;user id=aaaaa67_SQLLogin_1;pwd=fd82nua4ig;data source=EmpDB75.mssql.somee.com;persist security info=False;initial catalog=EmpDB75
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //modelBuilder.Entity<UserVehicle>(entity =>
+            //{
+            //    entity.HasKey(x => new { x.CarId, x.EmployeeId });
+            //}
+            //);
+
             modelBuilder.Entity<Address>(entity =>
             {
                 entity.Property(e => e.AddressId).HasColumnName("AddressID");

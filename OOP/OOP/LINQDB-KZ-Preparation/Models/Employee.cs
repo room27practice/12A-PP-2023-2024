@@ -10,6 +10,7 @@ namespace LINQDB_KZ_Preparation.Models
             Departments = new HashSet<Department>();
             InverseManager = new HashSet<Employee>();
             Projects = new HashSet<Project>();
+            //   UserVehicles = new HashSet<UserVehicle>();
         }
 
         public int EmployeeId { get; set; }
@@ -23,6 +24,26 @@ namespace LINQDB_KZ_Preparation.Models
         public decimal Salary { get; set; }
         public int? AddressId { get; set; }
 
+        public Happiness HappinessStatus => CalculateHappiness();
+
+        private Happiness CalculateHappiness()
+        {
+            if (Salary>6000)
+            {
+                return Happiness.SuperHappy;
+            }
+            if (Salary > 4000)
+            {
+                return Happiness.AlmostHappy;
+            }
+            if (Salary > 3000)
+            {
+                return Happiness.Macdonalds;
+            }
+            return Happiness.Miserable;
+        }
+
+
         public virtual Address? Address { get; set; }
         public virtual Department Department { get; set; } = null!;
         public virtual Employee? Manager { get; set; }
@@ -30,5 +51,12 @@ namespace LINQDB_KZ_Preparation.Models
         public virtual ICollection<Employee> InverseManager { get; set; }
 
         public virtual ICollection<Project> Projects { get; set; }
+
+        // public ICollection<UserVehicle> UserVehicles { get; set; }
     }
+}
+
+public enum Happiness
+{
+    SuperHappy, AlmostHappy, Macdonalds, Miserable
 }

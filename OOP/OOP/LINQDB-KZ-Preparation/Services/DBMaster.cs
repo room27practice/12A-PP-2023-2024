@@ -21,6 +21,13 @@ namespace LINQDB_KZ_Preparation.Services
             dbcontext = new SoftUniContext();
         }
 
+
+        public List<T> GetAll<T>()
+            where T : class
+        {           
+            return dbcontext.Set<T>().ToList();    
+        }
+
         public List<Project> GetAllProjects()
         {
             return dbcontext.Projects.ToList();
@@ -28,15 +35,15 @@ namespace LINQDB_KZ_Preparation.Services
 
         public Employee GetEmployeeById(int id)
         {
-           return dbcontext.Employees
-                .Include(e=>e.Department)
-                .ThenInclude(d=>d.Manager)
-                .FirstOrDefault(x=>x.EmployeeId==id);
+            return dbcontext.Employees
+                 .Include(e => e.Department)
+                 .ThenInclude(d => d.Manager)
+                 .FirstOrDefault(x => x.EmployeeId == id);
         }
 
         public Project GetProjectById(int id)
         {
-            return dbcontext.Projects.FirstOrDefault(x=>x.ProjectId==id);
+            return dbcontext.Projects.FirstOrDefault(x => x.ProjectId == id);
         }
 
         public List<Project> GetProjectsStartedAfterDate(DateTime date)
@@ -44,6 +51,10 @@ namespace LINQDB_KZ_Preparation.Services
             return dbcontext.Projects.Where(x => x.StartDate > date).ToList();
         }
 
+        public List<Project> GetProjectsStartedBeforeDate(DateTime date)
+        {
+            return dbcontext.Projects.Where(x => x.StartDate <= date).ToList();
+        }
 
         public List<Employee> GetAllEmployeesFromTown(int townId)
         {
@@ -59,11 +70,59 @@ namespace LINQDB_KZ_Preparation.Services
             var result2 = dbcontext.Employees.Where(e => e.Projects.Any(p => p.EndDate == null))
                 .Select(e1 => e1.Address).ToArray();
 
-            Console.WriteLine($"{result.Count()}    -- {result2.Count()}");
-                return result;
+            Console.WriteLine($"{result.Count()}   -- {result2.Count()}");
+            return result;
         }
 
+        public Dictionary<int, string> GetDepatamentsNames()
+        {
+            var result = dbcontext.Departments.ToDictionary(d => d.DepartmentId, d => d.Name);
+            return result;
 
+        }
 
+        public PersonDataMiniDTO[] GetAllEmpsFromDepartment(int departmentId)
+        {
+            return dbcontext.Employees
+
+                .Where(e => e.DepartmentId == departmentId)
+                //  .OrderByDescending(e=>e.Projects.Count())
+                .Select(e => new PersonDataMiniDTO
+                {
+                    Id = e.EmployeeId,
+                    Name = $"{e.FirstName.ToUpper()[0]}. {e.LastName}",
+                    Salary = e.Salary * 0.9m,
+                    ProjectsCount = e.Projects.Count()
+                })
+                .OrderByDescending(e => e.ProjectsCount)
+                .ToArray();
+        }
     }
 }
+
+public class PersonDataMiniDTO
+{
+    public PersonDataMiniDTO()
+    {
+
+    }
+    public PersonDataMiniDTO(int id, string name, decimal salary)
+    {
+        Id = id;
+        Name = name;
+        Salary = salary;
+    }
+
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public decimal Salary { get; set; }
+    public int ProjectsCount { get; set; }
+    public override string ToString()
+    {
+        return $"Id:[{Id}]. {Name} --{Salary:F2}--. Works in {ProjectsCount} projects.";
+    }
+}
+
+
+
+
