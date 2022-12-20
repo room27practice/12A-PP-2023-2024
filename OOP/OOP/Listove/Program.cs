@@ -6,7 +6,16 @@
 
         //  nums[8] = 45;
 
-        MyList<int> myNums = new MyList<int>();
+        SpecialList<int> myNums = new SpecialList<int>();
+        myNums.Push(3);
+        myNums.Push(6);
+        myNums.Push(8);
+        myNums.Push(7);
+        myNums.Push(2);
+
+        Console.WriteLine(myNums[2]);
+
+
         MyList<bool> myNums2 = new MyList<bool>();
 
         myNums.AuthorName = "Marin";
@@ -150,6 +159,17 @@ public class SpecialList<T>
     private List<T> hiddenList = new List<T>();
     public static string ProjectName { get; set; }
     public string AuthorName { get; set; }
+
+    public T this[int index]
+    {
+        get { 
+            
+            return hiddenList[index]; 
+                
+        }
+        set => hiddenList[index] = value;
+    }
+
 
     public void Push(T element)
     {

@@ -27,12 +27,11 @@ namespace LINQDB_KZ_Preparation
     internal class Program
     {
         static void Main(string[] args)
-        {
-          
+        {       
             
             IDBMaster db = new DBMaster();
 
-            var test = new TestClass(24, "Genadi");
+           // var test = new TestClass(24, "Genadi");
              // TestAutoPropertiesDemo(db, test);
             //  DemoStuff(db);
 
@@ -95,6 +94,8 @@ namespace LINQDB_KZ_Preparation
                 Console.WriteLine(emp);
             }
             goto nachalo;
+       
+        
         }
 
         private static void DemoStuff(IDBMaster db)
