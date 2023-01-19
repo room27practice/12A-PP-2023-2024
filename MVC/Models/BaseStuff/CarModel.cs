@@ -4,10 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Animals.Models
+namespace Animals.Models.BaseStuff
 {
     public abstract class CarModel
     {
+        public int Id { get; set; }
+
+        public CarModel()
+        { }
+
         protected CarModel(string? model, int startYearOfModel, double maxSpeedKmPh, double weight, double loadCappacity)
         {
             Model = model;
@@ -17,11 +22,11 @@ namespace Animals.Models
             LoadCappacity = loadCappacity;
         }
 
-        public string? Model { get; } = "Mustang";
-        public int StartYearOfModel { get; }
-        public double MaxSpeedKmPh { get; }
-        public double Weight { get; }
-        public double LoadCappacity { get; }
+        public string? Model { get; set; }
+        public int StartYearOfModel { get; set; }
+        public double MaxSpeedKmPh { get; set; }
+        public double Weight { get; set; }
+        public double LoadCappacity { get; set; }
 
         public double GetHoursForTravel(double distance)
         {

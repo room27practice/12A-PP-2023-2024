@@ -6,20 +6,26 @@ using System.Threading.Tasks;
 
 namespace Animals.Models
 {
-    public class Battery
+    public class Batery
     {
-        public double MaxCapacity { get; protected set; }
+        public int Id { get; set; }
+
+        //ТОDO MAKE UNIQUE  
+     //   public int ElectricCarId { get; set; }
+        public virtual ElectricCar ElectricCar { get; set; }
+
+        public double MaxCapacity { get; set; }
         public double RemainingCapacity { get; set; }
         public string Type { get; set; }
         public int LifeCycles { get; set; } = 100000;
-        public Battery()
+        public Batery()
         {
 
             MaxCapacity = 50;
             RemainingCapacity = 50;
             Type = "Lithium-ion";
         }
-        public Battery(double MaxCapacity, string Type)
+        public Batery(double MaxCapacity, string Type)
         {
             RemainingCapacity = MaxCapacity;
             this.Type = Type;

@@ -4,24 +4,28 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Animals.Models.BaseStuff;
 
 namespace Animals.Models
 {
-    public class FuelCarData : CarModel, ITravelable
+    public class FuelCar : CarModel, ITravelable
     {
         private double tankCapacity;
 
-        public FuelCarData(string? model, int startYearOfModel, double maxSpeedKmPh, double weight, double loadCappacity) : base(model, startYearOfModel, maxSpeedKmPh, weight, loadCappacity)
+        public FuelCar()
+        {
+        }
+
+        public FuelCar(string? model, int startYearOfModel, double maxSpeedKmPh, double weight, double loadCappacity) : base(model, startYearOfModel, maxSpeedKmPh, weight, loadCappacity)
         {
             Tank = new Tank();
             Console.WriteLine(DateTime.UtcNow);
         }
-        public FuelCarData(string? model, int startYearOfModel, double maxSpeedKmPh, double weight, double loadCappacity, Tank tank) : this(model, startYearOfModel, maxSpeedKmPh, weight, loadCappacity)
+        public FuelCar(string? model, int startYearOfModel, double maxSpeedKmPh, double weight, double loadCappacity, Tank tank) : this(model, startYearOfModel, maxSpeedKmPh, weight, loadCappacity)
         {
             Tank = tank;             
         }
-        private Tank Tank { get; set; }
-        public double TravelDistanceKoef { get; protected set; } = 10;
+        public double TravelDistanceKoef { get; set; } = 10;
         public double MaxTravelDistance
         {
             get { return tankCapacity; }
@@ -31,6 +35,9 @@ namespace Animals.Models
                 tankCapacity = value;
             }
         }
+
+        
+
 
         public void Recharge() { Tank.RemainingCapacity = Tank.MaxCapacity; }
        
@@ -55,5 +62,7 @@ namespace Animals.Models
             }
 
         }
+        public int TankId { get; set; }
+        public virtual Tank Tank { get; set; }
     }
 }

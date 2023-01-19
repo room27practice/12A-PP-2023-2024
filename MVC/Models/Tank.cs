@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,12 @@ namespace Animals.Models
 {
     public class Tank
     {
+        public int Id { get; set; }
+       
+        //ТОDO MAKE UNIQUE  
+    //    public int FuelCarId { get; set; }
+        public virtual FuelCar FuelCar { get; set; }
+
         public double MaxCapacity { get; set; }
         public double RemainingCapacity { get; set; } = 10;
         public string Type { get; protected set; }
