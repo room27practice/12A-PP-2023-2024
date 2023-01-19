@@ -49,7 +49,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQDB-KZ-Preparation", "LI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IcompareableDemo", "IcompareableDemo\IcompareableDemo.csproj", "{F3FAE66C-D22A-47C8-8B7E-48217B5A45D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegexDemo", "RegexDemo\RegexDemo.csproj", "{5439CF9A-0BA7-4F0D-94E8-8F360E5371E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RegexDemo", "RegexDemo\RegexDemo.csproj", "{5439CF9A-0BA7-4F0D-94E8-8F360E5371E2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnonimousDemo", "AnonimousDemo\AnonimousDemo.csproj", "{6ABF69FD-61D7-40B9-AD7E-18BFD26C3AEA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScopesDemo", "ScopesDemo\ScopesDemo.csproj", "{1C653F94-2FD4-422C-9E5E-08DC5BBC6CD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gringots", "Gringots\Gringots.csproj", "{8486C696-087F-4744-AED7-0AB75444A43F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +159,18 @@ Global
 		{5439CF9A-0BA7-4F0D-94E8-8F360E5371E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5439CF9A-0BA7-4F0D-94E8-8F360E5371E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5439CF9A-0BA7-4F0D-94E8-8F360E5371E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ABF69FD-61D7-40B9-AD7E-18BFD26C3AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ABF69FD-61D7-40B9-AD7E-18BFD26C3AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ABF69FD-61D7-40B9-AD7E-18BFD26C3AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ABF69FD-61D7-40B9-AD7E-18BFD26C3AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C653F94-2FD4-422C-9E5E-08DC5BBC6CD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C653F94-2FD4-422C-9E5E-08DC5BBC6CD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C653F94-2FD4-422C-9E5E-08DC5BBC6CD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C653F94-2FD4-422C-9E5E-08DC5BBC6CD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8486C696-087F-4744-AED7-0AB75444A43F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8486C696-087F-4744-AED7-0AB75444A43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8486C696-087F-4744-AED7-0AB75444A43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8486C696-087F-4744-AED7-0AB75444A43F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

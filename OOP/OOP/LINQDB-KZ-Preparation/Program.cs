@@ -1,6 +1,7 @@
 ﻿using LINQDB_KZ_Preparation.Contracts;
 using LINQDB_KZ_Preparation.Models;
 using LINQDB_KZ_Preparation.Services;
+using Newtonsoft.Json;
 
 namespace LINQDB_KZ_Preparation
 {
@@ -30,10 +31,12 @@ namespace LINQDB_KZ_Preparation
         {       
             
             IDBMaster db = new DBMaster();
-
+          object data=  db.GetSpeciaData();
+            string dataAsJSON = JsonConvert.SerializeObject(data,Formatting.Indented);
+            Console.WriteLine(dataAsJSON);
            // var test = new TestClass(24, "Genadi");
-             // TestAutoPropertiesDemo(db, test);
-            //  DemoStuff(db);
+           // TestAutoPropertiesDemo(db, test);
+           //  DemoStuff(db);
 
 
             Application(db);

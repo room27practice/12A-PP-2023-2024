@@ -1,4 +1,5 @@
 ﻿using LINQDB_KZ_Preparation.Models;
+using LINQDB_KZ_Preparation.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,5 +19,6 @@ namespace LINQDB_KZ_Preparation.Contracts
         Project GetProjectById(int id);
         List<Project> GetProjectsStartedAfterDate(DateTime date);
         List<Project> GetProjectsStartedBeforeDate(DateTime date);
+        object GetSpeciaData();
     }
 }

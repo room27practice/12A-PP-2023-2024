@@ -1,6 +1,7 @@
 ﻿using LINQDB_KZ_Preparation.Contracts;
 using LINQDB_KZ_Preparation.Models;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,8 +25,8 @@ namespace LINQDB_KZ_Preparation.Services
 
         public List<T> GetAll<T>()
             where T : class
-        {           
-            return dbcontext.Set<T>().ToList();    
+        {
+            return dbcontext.Set<T>().ToList();
         }
 
         public List<Project> GetAllProjects()
@@ -97,29 +98,51 @@ namespace LINQDB_KZ_Preparation.Services
                 .OrderByDescending(e => e.ProjectsCount)
                 .ToArray();
         }
-    }
-}
 
-public class PersonDataMiniDTO
-{
-    public PersonDataMiniDTO()
-    {
+        public object GetSpeciaData()
+        {
+            var data = dbcontext.Employees.Select(x => new
+            {
+                Name = x.FirstName + " " + x.LastName,
+                Projects = x.Projects.Select(p => p.Name).ToArray(),
+                Salary = x.Salary,
+                Address = new
+                {
+                    Town = x.Address.Town.Name,
+                    Street = x.Address.AddressText
+                }
+            }).ToArray();
+          
+            return data;
+        }
 
-    }
-    public PersonDataMiniDTO(int id, string name, decimal salary)
-    {
-        Id = id;
-        Name = name;
-        Salary = salary;
+        PersonDataMiniDTO[] IDBMaster.GetAllEmpsFromDepartment(int departmentId)
+        {
+            throw new NotImplementedException();
+        }
     }
 
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public decimal Salary { get; set; }
-    public int ProjectsCount { get; set; }
-    public override string ToString()
+    public class PersonDataMiniDTO
     {
-        return $"Id:[{Id}]. {Name} --{Salary:F2}--. Works in {ProjectsCount} projects.";
+        public PersonDataMiniDTO()
+        {
+
+        }
+        public PersonDataMiniDTO(int id, string name, decimal salary)
+        {
+            Id = id;
+            Name = name;
+            Salary = salary;
+        }
+
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public decimal Salary { get; set; }
+        public int ProjectsCount { get; set; }
+        public override string ToString()
+        {
+            return $"Id:[{Id}]. {Name} --{Salary:F2}--. Works in {ProjectsCount} projects.";
+        }
     }
 }
 
