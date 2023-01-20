@@ -8,10 +8,12 @@
 
 <p>Here will be listed All Cars from our Database</p>
 
-
+<div class="d-flex justify-content-between flex-wrap bg-dark">
+    @for (int i = 0; i < 2; i++)
+    {
 @foreach (var car in Model)
 {
-    <div class="card" style="width: 18rem;">
+    <div class="card mb-4" style="width: 18rem;">
         <img class="card-img-top" src="@car.ImgUrl" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">@car.Model</h5>
@@ -27,7 +29,9 @@
             <a href="#" class="card-link">Another link</a>
         </div>
     </div>
-    
-    
-    <p>@car.Model</p>
+
 }
+        
+    }
+
+    </div>    
