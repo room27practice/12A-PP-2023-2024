@@ -22,6 +22,9 @@ namespace Animals
 
             var app = builder.Build();
 
+            builder.Services.AddRazorPages()
+    .AddRazorRuntimeCompilation();
+
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
