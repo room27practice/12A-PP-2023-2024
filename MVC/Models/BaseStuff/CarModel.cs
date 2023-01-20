@@ -22,6 +22,9 @@ namespace Animals.Models.BaseStuff
             LoadCappacity = loadCappacity;
         }
 
+
+        public string ImgUrl { get; set; }
+        public string Creator { get; set; }
         public string? Model { get; set; }
         public int StartYearOfModel { get; set; }
         public double MaxSpeedKmPh { get; set; }

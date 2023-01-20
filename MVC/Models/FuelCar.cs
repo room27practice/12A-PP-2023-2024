@@ -13,8 +13,7 @@ namespace Animals.Models
         private double tankCapacity;
 
         public FuelCar()
-        {
-        }
+        {        }
 
         public FuelCar(string? model, int startYearOfModel, double maxSpeedKmPh, double weight, double loadCappacity) : base(model, startYearOfModel, maxSpeedKmPh, weight, loadCappacity)
         {
@@ -28,15 +27,8 @@ namespace Animals.Models
         public double TravelDistanceKoef { get; set; } = 10;
         public double MaxTravelDistance
         {
-            get { return tankCapacity; }
-            set
-            {
-                value = Tank.MaxCapacity * TravelDistanceKoef;
-                tankCapacity = value;
-            }
-        }
-
-        
+            get;set;
+        }      
 
 
         public void Recharge() { Tank.RemainingCapacity = Tank.MaxCapacity; }

@@ -1,6 +1,33 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@model ICollection<FuelCar>
+
+
+@{
+    ViewData["Title"] = "All Automobiles with fuel!!!!";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<p>Here will be listed All Cars from our Database</p>
+
+
+@foreach (var car in Model)
+{
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="@car.ImgUrl" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">@car.Model</h5>
+            <p class="card-text">This car was added in exercises by: @car.Creator</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Max speed: @car.MaxSpeedKmPh kmph.</li>
+            <li class="list-group-item">Max Travel distance: @car.MaxTravelDistance</li>
+            <li class="list-group-item">Tank Type @car.Tank.Type</li>
+        </ul>
+        <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+        </div>
+    </div>
+    
+    
+    <p>@car.Model</p>
+}
