@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KOP", "KOP.csproj", "{55F60958-D298-49BE-9C98-CE6C754090E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakFast", "..\BreakFast\BreakFast.csproj", "{A9D18359-E735-4C08-982A-D8CF09FF04D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55F60958-D298-49BE-9C98-CE6C754090E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F60958-D298-49BE-9C98-CE6C754090E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F60958-D298-49BE-9C98-CE6C754090E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F60958-D298-49BE-9C98-CE6C754090E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9D18359-E735-4C08-982A-D8CF09FF04D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D18359-E735-4C08-982A-D8CF09FF04D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D18359-E735-4C08-982A-D8CF09FF04D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D18359-E735-4C08-982A-D8CF09FF04D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C827EBE1-3F9E-437C-8C28-46A53679B796}
+	EndGlobalSection
+EndGlobal

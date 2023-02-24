@@ -1,0 +1,78 @@
+ div>img{
+    width: 60px;
+    height: 60px;
+    
+ }
+ 
+ div {
+    display:flex;
+    justify-content: center;
+    padding-top:20px;
+     width: 100px;
+     height: 100px;
+     background-color: red;
+     /* border-radius: 2rem; */
+   
+ }
+
+ section{
+    background-color: blanchedalmond;
+ }
+section.target:hover div{
+    position: relative;
+    animation-name: example;
+    animation-iteration-count: 1;
+    animation-duration: 8s;
+    animation-delay: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+ 
+
+}
+
+ @keyframes example {
+     0% {
+         background-color: red;
+         left: 0px;
+         top: 0px;
+         border-radius: 2rem;
+     }
+
+     25% {
+         background-color: yellow;
+         left: 200px;
+         top: 0px;
+         border-radius: 2rem;
+     }
+     50% {
+        background-color: rgb(0, 238, 255);
+        left: 600px;
+        top: 0px;
+        border-radius: 2rem;
+    }
+
+     75% {
+         background-color: blue;
+         left: 200px;
+         top: 200px;
+         border-radius: 2rem;
+     }
+
+     100% {
+         background-color: green;
+         left: 0px;
+         top: 200px;
+         border-radius: 2rem;
+     }
+
+     /* 100% {
+         background-color: red;
+         left: 0px;
+         top: 0px;
+         border-radius: 2rem;
+     } */
+ }
