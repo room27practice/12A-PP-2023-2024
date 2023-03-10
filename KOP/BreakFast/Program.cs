@@ -4,6 +4,12 @@
     {
         static  void Main()
         {
+            
+            if(Thread.CurrentThread.ThreadState == ThreadState.Running)
+            {
+                Console.WriteLine($"Main ThreadId is : {Thread.CurrentThread.ManagedThreadId}");
+
+            }
             Task coffee = new Task(() => PourCoffee());
             Task fryThings = new Task(() =>
             {
@@ -13,21 +19,23 @@
             });
             Task prepareBread = new Task(() =>
             {
+                if (Thread.CurrentThread.ThreadState != ThreadState.Running)
+                {
+                    Console.WriteLine($"Bread ThreadId is : {Thread.CurrentThread.ManagedThreadId}");
+
+                }
                 ToastBread();
                 JamOnBread();
             });
 
             Task juice = new Task(() => PourJuiceInGlass());
 
-
-
             Task[] breakfast = { coffee, fryThings, prepareBread, juice };
-
             for (int i = 0; i < breakfast.Length; i++)
             {
                 breakfast[i].Start();
             }
-            Thread.Sleep(4000);
+           Thread.Sleep(4000);
             //Task.WaitAll(breakfast);
             Console.WriteLine("BreakFast was done");
 
@@ -45,7 +53,6 @@
 
         public static void PourCoffee()
         {
-            
             Thread.Sleep(2500);
             Console.WriteLine("1. The Cofee was Poured.");
         }
