@@ -5,6 +5,9 @@
         static  void Main()
         {
             
+
+
+
             if(Thread.CurrentThread.ThreadState == ThreadState.Running)
             {
                 Console.WriteLine($"Main ThreadId is : {Thread.CurrentThread.ManagedThreadId}");

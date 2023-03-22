@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KOP", "KOP.csproj", "{55F60958-D298-49BE-9C98-CE6C754090E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreakFast", "..\BreakFast\BreakFast.csproj", "{A9D18359-E735-4C08-982A-D8CF09FF04D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BreakFast", "..\BreakFast\BreakFast.csproj", "{A9D18359-E735-4C08-982A-D8CF09FF04D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasksCreating", "..\TasksCreating\TasksCreating.csproj", "{B4F87412-22B5-44CC-99EA-1565A1ED653F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A9D18359-E735-4C08-982A-D8CF09FF04D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9D18359-E735-4C08-982A-D8CF09FF04D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9D18359-E735-4C08-982A-D8CF09FF04D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F87412-22B5-44CC-99EA-1565A1ED653F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F87412-22B5-44CC-99EA-1565A1ED653F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F87412-22B5-44CC-99EA-1565A1ED653F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F87412-22B5-44CC-99EA-1565A1ED653F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
